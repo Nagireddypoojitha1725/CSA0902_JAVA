@@ -1,0 +1,35 @@
+def print_numbers_with_skip(M, N, K):
+    if K <= 0:
+        print("K must be a positive number.")
+        return
+
+    if M > N:
+        print("M should be less than or equal to N.")
+        return
+
+    current_num = M
+
+    while current_num <= N:
+        print(current_num, end=", ")
+        current_num += K
+
+    print("\n")
+
+# Test cases
+print("Test Case 1:")
+print_numbers_with_skip(50, 100, 7)
+
+print("Test Case 2:")
+print_numbers_with_skip(15, 5, 2)
+
+print("Test Case 3:")
+print_numbers_with_skip(25, 50, 4)
+
+print("Test Case 4:")
+print_numbers_with_skip(15, 100, -2)
+
+print("Test Case 5:")
+print_numbers_with_skip(0, 0, 2)
+
+print("Test Case 6:")
+print_numbers_with_skip(200, 200, 50)
