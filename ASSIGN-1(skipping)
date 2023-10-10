@@ -1,35 +1,43 @@
-def print_numbers_with_skip(M, N, K):
-    if K <= 0:
-        print("K must be a positive number.")
-        return
+public class SkipNumbers {
+    public static void main(String[] args) {
+        // Test cases
+        System.out.println("Test Case 1:");
+        printNumbersWithSkip(50, 100, 7);
 
-    if M > N:
-        print("M should be less than or equal to N.")
-        return
+        System.out.println("Test Case 2:");
+        printNumbersWithSkip(15, 5, 2);
 
-    current_num = M
+        System.out.println("Test Case 3:");
+        printNumbersWithSkip(25, 50, 4);
 
-    while current_num <= N:
-        print(current_num, end=", ")
-        current_num += K
+        System.out.println("Test Case 4:");
+        printNumbersWithSkip(15, 100, -2);
 
-    print("\n")
+        System.out.println("Test Case 5:");
+        printNumbersWithSkip(0, 0, 2);
 
-# Test cases
-print("Test Case 1:")
-print_numbers_with_skip(50, 100, 7)
+        System.out.println("Test Case 6:");
+        printNumbersWithSkip(200, 200, 50);
+    }
 
-print("Test Case 2:")
-print_numbers_with_skip(15, 5, 2)
+    public static void printNumbersWithSkip(int M, int N, int K) {
+        if (K <= 0) {
+            System.out.println("K must be a positive number.");
+            return;
+        }
 
-print("Test Case 3:")
-print_numbers_with_skip(25, 50, 4)
+        if (M > N) {
+            System.out.println("M should be less than or equal to N.");
+            return;
+        }
 
-print("Test Case 4:")
-print_numbers_with_skip(15, 100, -2)
+        int currentNum = M;
 
-print("Test Case 5:")
-print_numbers_with_skip(0, 0, 2)
+        while (currentNum <= N) {
+            System.out.print(currentNum + ", ");
+            currentNum += K;
+        }
 
-print("Test Case 6:")
-print_numbers_with_skip(200, 200, 50)
+        System.out.println();
+    }
+}
